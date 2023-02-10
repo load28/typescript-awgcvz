@@ -2,12 +2,14 @@ import { BaseUrlBuilder } from './base-url-builder';
 import { ProjectUrlBuilder } from './project/project';
 
 export class OrganizationUrlBuilder extends BaseUrlBuilder {
-  public constructor(parent: BaseUrlBuilder, name: string) {
+  queryParamKeys = ['task_detail'];
+
+  public constructor(parent: BaseUrlBuilder, name: string, private queryParams: string[]) {
     super(parent);
-    this.pathes.push(name);
+    this.setPath(name, queryParams);
   }
 
   public project(): ProjectUrlBuilder {
-    return new ProjectUrlBuilder(this);
+    return new ProjectUrlBuilder(this, 'project', [...this.queryParams, ...this.queryParamKeys]);
   }
 }
