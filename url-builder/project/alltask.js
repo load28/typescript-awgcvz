@@ -14,14 +14,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.AllTaskUrlBuilder = void 0;
 var base_url_builder_1 = require("../base-url-builder");
 var AllTaskUrlBuilder = /** @class */ (function (_super) {
     __extends(AllTaskUrlBuilder, _super);
-    function AllTaskUrlBuilder(parent, queryParams) {
+    function AllTaskUrlBuilder(parent) {
         var _this = _super.call(this, parent) || this;
-        _this.setPath('mytask', queryParams);
+        _this.setPath('mytask');
         return _this;
     }
     return AllTaskUrlBuilder;

@@ -5,7 +5,7 @@ import { URL_PARAM_TYPE } from './url-builder/url-builder.const';
 const url = UrlBuilder.root()
     .organization('swit-tech')
     .project()
-    .detail('210907063909376dcVW').params('asd', '23').build({isDev: true});
+    .detail('210907063909376dcVW').params('ws_id', '23').build({isDev: true});
 
 // setParamsFn(URL_PARAM_TYPE.TASK_DETAIL, '23');
 // setParamsFn('task_detail', '23');

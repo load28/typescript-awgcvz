@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.MytaskUrlBuilder = void 0;
 var base_url_builder_1 = require("../base-url-builder");
 var MytaskUrlBuilder = /** @class */ (function (_super) {

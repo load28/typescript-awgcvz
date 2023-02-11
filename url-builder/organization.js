@@ -14,26 +14,23 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __spreadArray = (this && this.__spreadArray) || function (to, from) {
-    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
-    return to;
-};
-exports.__esModule = true;
-exports.OrganizationUrlBuilder = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationUrlBuilder = exports.PROJECT_QUERY_PARAMS = void 0;
 var base_url_builder_1 = require("./base-url-builder");
 var project_1 = require("./project/project");
+exports.PROJECT_QUERY_PARAMS = {
+    WS_ID: 'ws_id',
+};
 var OrganizationUrlBuilder = /** @class */ (function (_super) {
     __extends(OrganizationUrlBuilder, _super);
-    function OrganizationUrlBuilder(parent, name, queryParams) {
+    function OrganizationUrlBuilder(parent, name) {
         var _this = _super.call(this, parent) || this;
-        _this.queryParams = queryParams;
-        _this.queryParamKeys = ['task_detail'];
-        _this.setPath(name, queryParams);
+        _this.setPath(name);
+        _this.setQueryParams(exports.PROJECT_QUERY_PARAMS);
         return _this;
     }
     OrganizationUrlBuilder.prototype.project = function () {
-        return new project_1.ProjectUrlBuilder(this, 'project', __spreadArray(__spreadArray([], this.queryParams), this.queryParamKeys));
+        return new project_1.ProjectUrlBuilder(this, 'project');
     };
     return OrganizationUrlBuilder;
 }(base_url_builder_1.BaseUrlBuilder));

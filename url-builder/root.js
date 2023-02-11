@@ -14,19 +14,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.RootUrlHandler = void 0;
 var base_url_builder_1 = require("./base-url-builder");
 var organization_1 = require("./organization");
 var RootUrlHandler = /** @class */ (function (_super) {
     __extends(RootUrlHandler, _super);
     function RootUrlHandler() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.queryParamKeys = ['ws_id'];
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     RootUrlHandler.prototype.organization = function (name) {
-        return new organization_1.OrganizationUrlBuilder(this, name, this.queryParamKeys);
+        return new organization_1.OrganizationUrlBuilder(this, name);
     };
     return RootUrlHandler;
 }(base_url_builder_1.BaseUrlBuilder));

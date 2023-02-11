@@ -14,14 +14,18 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-exports.ProjectDetailUrlBuilder = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectDetailUrlBuilder = exports.PROJECT_QUERY_PARAMS = void 0;
 var base_url_builder_1 = require("../base-url-builder");
+exports.PROJECT_QUERY_PARAMS = {
+    DETAIL_ID: 'detail_id',
+};
 var ProjectDetailUrlBuilder = /** @class */ (function (_super) {
     __extends(ProjectDetailUrlBuilder, _super);
-    function ProjectDetailUrlBuilder(parent, projectId, queryParams) {
+    function ProjectDetailUrlBuilder(parent, projectId) {
         var _this = _super.call(this, parent) || this;
-        _this.setPath(projectId, queryParams);
+        _this.setPath(projectId);
+        _this.setQueryParams(exports.PROJECT_QUERY_PARAMS);
         return _this;
     }
     return ProjectDetailUrlBuilder;
